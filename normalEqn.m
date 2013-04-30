@@ -12,8 +12,10 @@ theta = zeros(size(X, 2), 1);
 
 % ---------------------- Sample Solution ----------------------
 
+m = length(y); % number of training examples
+%X = [ones(m, 1), X]; % Add a column of ones to x
 
-
+theta = pinv(X' * X) * X' * y;
 
 % -------------------------------------------------------------
 
